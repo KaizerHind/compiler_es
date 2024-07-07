@@ -1467,7 +1467,9 @@ static void setconfig(char *root)
 
 static void setcaption(void)
 {
-  pc_printf("Pawn compiler " VERSION_STR "\t \t \tCopyright (c) 1997-2006, ITB CompuPhase\n\n");
+  pc_printf("\n\tUnlimited Pawn 2022-2024\n\tSpanish Compiler(https://discord.gg/2ZcSHt3Q7h)\n");
+  pc_printf("\n\tPawn compiler " VERSION_STR "\n\tCopyright (c) 1997-2006, ITB CompuPhase\n\n");
+
 }
 
 static void about(void)
@@ -3458,7 +3460,7 @@ SC_FUNC void check_tagmismatch(int formaltag,int actualtag,int allowcoerce,int e
     } /* if */
     if(errline>0)
       errorset(sSETPOS,errline);
-    error(213,"tag",formal_tagname,actual_tagname); /* tag mismatch */
+    error(213,"Etiqueta",formal_tagname,actual_tagname); /* tag mismatch */
     if(errline>0)
       errorset(sSETPOS,-1);
   } /* if */

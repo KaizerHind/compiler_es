@@ -937,7 +937,7 @@ static int hier14(value *lval1)
         same=same && (lval3.arrayidx[i]==lval2.arrayidx[i]);
       } /* for */
       if (same)
-        error(226,lval3.sym->name);   /* self-assignment */
+        error(226,lval3.sym->name, lval3.sym->name, lval3.sym->name);   /* self-assignment */
     } /* if */
   } else {
     if (oper) {
@@ -954,7 +954,7 @@ static int hier14(value *lval1)
       /* check whether lval2 and lval3 (old lval1) refer to the same variable */
       if (lval2.ident==iVARIABLE && lval3.ident==lval2.ident && lval3.sym==lval2.sym) {
         assert(lval3.sym!=NULL);
-        error(226,lval3.sym->name);   /* self-assignment */
+        error(226,lval3.sym->name, lval3.sym->name, lval3.sym->name);   /* self-assignment */
       } /* if */
     } /* if */
   } /* if */
